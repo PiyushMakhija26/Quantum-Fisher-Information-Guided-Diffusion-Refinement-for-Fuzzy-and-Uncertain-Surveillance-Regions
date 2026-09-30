@@ -1,0 +1,12 @@
+torch>=2.0.0
+torchvision>=0.15.0
+diffusers>=0.20.0
+transformers>=4.30.0
+tensornetwork>=0.4.6
+opencv-python
+numpy
+scipy
+scikit-image
+lpips
+pytorch-fid
+pyiqa
