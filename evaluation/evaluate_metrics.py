@@ -3,6 +3,7 @@ import cv2
 import torch
 import numpy as np
 import argparse
+import json
 from skimage.metrics import peak_signal_noise_ratio as psnr
 from skimage.metrics import structural_similarity as ssim
 import lpips
@@ -38,6 +39,10 @@ def evaluate_metrics(pred_dir, gt_dir, seed=42):
             lpips_scores.append(loss_fn_alex(pred_tensor, gt_tensor).item())
             ma_scores.append(iqa_ma(pred_tensor).item())
             niqe_scores.append(iqa_niqe(pred_tensor).item())
+
+    # Save per-image arrays for statistical testing
+    with open(os.path.join(pred_dir, "ssim_scores.json"), "w") as f:
+        json.dump(ssim_scores, f)
 
     fid_score = calculate_fid_given_paths([gt_dir, pred_dir], batch_size=16, device='cuda', dims=2048)
     
