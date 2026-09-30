@@ -281,15 +281,3 @@ Individual baseline repositories invoked:
 
 ---
 
-## 9. Citation
-
-If you find this work, codebase, or mathematical formulation helpful in your research, please cite:
-
-```bibtex
-@article{makhija2024qfidiff,
-  title={Quantum Fisher Information Guided Diffusion Refinement for Fuzzy and Uncertain Surveillance Regions},
-  author={Makhija, Piyush and Collaborators},
-  journal={arXiv preprint},
-  year={2024}
-}
-```
