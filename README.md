@@ -12,6 +12,18 @@ By integrating principles from Quantum Metrology with modern Latent Diffusion Mo
 
 ---
 
+## Visual Demo
+
+Below is an end-to-end qualitative demonstration of the QFI-Diff pipeline evaluated on degraded surveillance test scenes ($512 \times 512$ RGB):
+
+<p align="center">
+  <img src="./assets/demo/qualitative_comparison.png" alt="QFI-Diff Qualitative Comparison" width="100%" />
+</p>
+
+*Figure: Qualitative comparison displaying `[Degraded Surveillance Input]` $\longrightarrow$ `[QFI Reliability Mask (2D TFIM)]` $\longrightarrow$ `[QFI-Diff Restored Output]`. The QFI mask (visualized with inferno colormap) dynamically identifies edge certainty and modulates the reverse DDIM diffusion trajectory under a manifold consistency constraint.*
+
+---
+
 ## The Problem: The Surveillance Fidelity Paradox
 
 Restoring heterogeneous surveillance imagery—such as grainy night-vision feeds or hazy perimeter cameras—presents a unique paradox for modern Artificial Intelligence:
